@@ -30,7 +30,7 @@ const Register: React.FC = () => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://localhost:4002/api/v1/user/register', {
+      const response = await fetch('https://affworld-services-1.onrender.com/api/v1/user/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password }),

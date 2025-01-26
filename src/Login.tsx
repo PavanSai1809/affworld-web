@@ -29,7 +29,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('http://localhost:4002/api/v1/user/login', {
+      const response = await fetch('https://affworld-services-1.onrender.com/api/v1/user/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -111,6 +111,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
               Forgot Password?
             </span>
           </p>
+          <div>or</div>
           <GoogleUsers onLoginSuccess={onLoginSuccess} />
         </div>
       </div>

@@ -15,7 +15,7 @@ const GoogleUsers: React.FC<GoogleUsersProps> = ({ onLoginSuccess }) => {
       const decoded = JSON.parse(atob(credentialResponse.credential.split(".")[1]));
       const userMail = decoded.email;
       const response = await fetch(
-        `http://localhost:4002/api/v1/user/validate-email?email=${userMail}`,
+        `https://affworld-services-1.onrender.com/api/v1/user/validate-email?email=${userMail}`,
         {
           method: "GET",
           headers: {
@@ -32,7 +32,7 @@ const GoogleUsers: React.FC<GoogleUsersProps> = ({ onLoginSuccess }) => {
             email: userMail,
             google_id: decoded.sub
           };
-          const response = await fetch('http://localhost:4002/api/v1/user/register', {
+          const response = await fetch('https://affworld-services-1.onrender.com/api/v1/user/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(params),
@@ -50,7 +50,7 @@ const GoogleUsers: React.FC<GoogleUsersProps> = ({ onLoginSuccess }) => {
           };
 
           const loginResponse = await fetch(
-            "http://localhost:4002/api/v1/user/login",
+            "https://affworld-services-1.onrender.com/api/v1/user/login",
             {
               method: "POST",
               headers: {

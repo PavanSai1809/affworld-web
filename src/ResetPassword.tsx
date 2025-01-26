@@ -36,7 +36,7 @@ const ResetPassword: React.FC = () => {
     try {
       setLoading(true);
 
-      const response = await fetch('http://localhost:4002/api/v1/user/reset-password', {
+      const response = await fetch('https://affworld-services-1.onrender.com/api/v1/user/reset-password', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

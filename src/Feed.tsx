@@ -21,7 +21,7 @@ const Feed: React.FC = () => {
 
   const fetchFeedPosts = async () => {
     try {
-      const response = await fetch("http://localhost:4002/api/v1/feed/getPosts", {
+      const response = await fetch("https://affworld-services-1.onrender.com/api/v1/feed/getPosts", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const Feed: React.FC = () => {
 
   const fetchOtherPosts = async () => {
     try {
-      const response = await fetch("http://localhost:4002/api/v1/feed/allPosts", {
+      const response = await fetch("https://affworld-services-1.onrender.com/api/v1/feed/allPosts", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const Feed: React.FC = () => {
     setIsPosting(true);
 
     try {
-      const response = await fetch("http://localhost:4002/api/v1/feed/createPost", {
+      const response = await fetch("https://affworld-services-1.onrender.com/api/v1/feed/createPost", {
         method: "POST",
         body: formData,
         headers: {

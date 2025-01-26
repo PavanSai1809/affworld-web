@@ -27,7 +27,7 @@ const Task: React.FC<TaskProps> = ({ onLogout }) => {
 
   const fetchUserDetails = async () => {
     try {
-      const response = await fetch("http://localhost:4002/api/v1/user/user-detail", {
+      const response = await fetch("https://affworld-services-1.onrender.com/api/v1/user/user-detail", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -43,7 +43,7 @@ const Task: React.FC<TaskProps> = ({ onLogout }) => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch("http://localhost:4002/api/v1/task/getTasks", {
+      const response = await fetch("https://affworld-services-1.onrender.com/api/v1/task/getTasks", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -65,7 +65,7 @@ const Task: React.FC<TaskProps> = ({ onLogout }) => {
   const addTask = async () => {
     if (name && description) {
       try {
-        const response = await fetch("http://localhost:4002/api/v1/task/createTask", {
+        const response = await fetch("https://affworld-services-1.onrender.com/api/v1/task/createTask", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -92,7 +92,7 @@ const Task: React.FC<TaskProps> = ({ onLogout }) => {
 
   const deleteTask = async (taskId: string) => {
     try {
-      const response = await fetch(`http://localhost:4002/api/v1/task/deleteTask/${taskId}`, {
+      const response = await fetch(`https://affworld-services-1.onrender.com/api/v1/task/deleteTask/${taskId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -113,7 +113,7 @@ const Task: React.FC<TaskProps> = ({ onLogout }) => {
 
   const updateTaskStatus = async (taskId: string, newStatus: string) => {
     try {
-      const response = await fetch(`http://localhost:4002/api/v1/task/updateTaskStatus/${taskId}`, {
+      const response = await fetch(`https://affworld-services-1.onrender.com/api/v1/task/updateTaskStatus/${taskId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

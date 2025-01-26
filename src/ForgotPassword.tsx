@@ -23,7 +23,7 @@ const ForgotPassword: React.FC = () => {
 
     try {
       const origin = window.location.origin;
-      const response = await fetch('http://localhost:4002/api/v1/user/forgot-password', {
+      const response = await fetch('https://affworld-services-1.onrender.com/api/v1/user/forgot-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, origin }),
