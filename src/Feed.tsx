@@ -15,6 +15,7 @@ const Feed: React.FC = () => {
   const [isPosting, setIsPosting] = useState(false);
 
   const token = localStorage.getItem("authToken");
+  console.log(token, 'tokemn')
 
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 

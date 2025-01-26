@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import GoogleUsers from './GoogleLogin';
 
 interface LoginProps {
   onLoginSuccess: () => void;
@@ -110,6 +111,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
               Forgot Password?
             </span>
           </p>
+          <GoogleUsers onLoginSuccess={onLoginSuccess} />
         </div>
       </div>
     </div>

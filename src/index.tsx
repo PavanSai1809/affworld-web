@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Task from './Home';
 import Login from './Login';
@@ -57,6 +58,8 @@ const App: React.FC = () => {
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <GoogleOAuthProvider clientId={"759410686722-hb8esvigtu4gaseg77kahtea2lvva5cn.apps.googleusercontent.com"}>
+      <App />
+    </GoogleOAuthProvider>
   </React.StrictMode>
 );
